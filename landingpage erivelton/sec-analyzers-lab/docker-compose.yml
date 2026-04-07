@@ -1,0 +1,56 @@
+version: '3.8'
+
+services:
+  # === NOVO: CORE ENGINE DA PLATAFORMA REAL ===
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+      - .:/lab_root
+      
+  waf-engine:
+    build: .
+    entrypoint: ["python", "/app/waf/engine.py"]
+    ports:
+      - "8081:8081"
+    volumes:
+      - .:/app
+    depends_on:
+      - backend
+
+  attack-simulator:
+    build: .
+    entrypoint: ["python", "/app/bot/attacker.py"]
+    volumes:
+      - .:/app
+    depends_on:
+      - waf-engine
+
+  # === MOTORES ORIGINAIS (SAST, DAST, CLOUD) ===
+  sast:
+    build: .
+    entrypoint: ["python", "/app/sast/engine.py"]
+    volumes:
+      - .:/app
+
+  dast:
+    build: .
+    entrypoint: ["python", "/app/dast/scanner.py"]
+    volumes:
+      - .:/app
+
+  cloud:
+    build: .
+    entrypoint: ["python", "/app/cloud/checker.py"]
+    volumes:
+      - .:/app
+
+  xdr-gui:
+    build: .
+    command: python -m http.server 8080 --directory /app/gui
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/app
