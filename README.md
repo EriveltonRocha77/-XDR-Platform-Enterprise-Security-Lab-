@@ -1,6 +1,7 @@
-🛡️ XDR Neo-Platform | Enterprise Security Lab
+```markdown
+# 🛡️ XDR Neo-Platform | Enterprise Security Lab
 
-Plataforma unificada de Extended Detection and Response (XDR) e Inteligência Cibernética Operacional
+**Plataforma unificada de Extended Detection and Response (XDR) e Inteligência Cibernética Operacional**
 
 [![Python](https://img.shields.io/badge/Python-3.11+-blue.svg)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.100+-009688.svg)](https://fastapi.tiangolo.com/)
@@ -13,7 +14,7 @@ Plataforma unificada de Extended Detection and Response (XDR) e Inteligência Ci
 
 ---
 
-🎯 Visão Geral
+## 🎯 Visão Geral
 
 A **XDR Neo-Platform** não é um simulador superficial.  
 A maioria das funcionalidades da interface aciona **algoritmos reais** de análise estatística, pattern matching e engenharia reversa implementados no núcleo da API.
@@ -38,7 +39,7 @@ Foi desenvolvida com o objetivo de simular um ambiente de SOC (Security Operatio
 
 ---
 
-🏗️ Arquitetura
+## 🏗️ Arquitetura
 
 ```text
 ┌─────────────────────────────────────────────────────────────────┐
@@ -62,7 +63,7 @@ Foi desenvolvida com o objetivo de simular um ambiente de SOC (Security Operatio
                                               └───────────┘
 ```
 
- Serviços Docker
+### Serviços Docker
 
 | Serviço             | Porta  | Função                              |
 |---------------------|--------|-------------------------------------|
@@ -76,9 +77,9 @@ Foi desenvolvida com o objetivo de simular um ambiente de SOC (Security Operatio
 
 ---
 
- 🛠️ Módulos Principais
+## 🛠️ Módulos Principais
 
- 1. Análise de Inteligência (SIEM)
+### 1. Análise de Inteligência (SIEM)
 - Painel central de telemetria em tempo real
 - SAST com AST (detecção de credenciais hardcoded e injeções)
 - DAST com fuzzing e detecção de LFI
@@ -86,26 +87,26 @@ Foi desenvolvida com o objetivo de simular um ambiente de SOC (Security Operatio
 - Correlação de IOCs via OSINT
 - Heurísticas de resposta automática (SOC Analyst AI)
 
- 2. Contra-Medidas Ativas (EDR / RASP)
+### 2. Contra-Medidas Ativas (EDR / RASP)
 - **RASP Shield** → Proteção em runtime
 - **Network Hex Hunter** → Detecção de padrões de buffer overflow
 - **YARA Memory Scan** → Pattern matching em memória
 - **DNS Tunneling Detector** → Entropia de Shannon
 - **Anomaly Engine** → Z-Score para comportamento anômalo
 
- 3. Laboratório Ofensivo
+### 3. Laboratório Ofensivo
 - **Attack Path Mapper** → DFS estilo BloodHound
 - **Hash Cracker** → Ataque de dicionário
 
 ---
 
- 🚀 Como Executar
+## 🚀 Como Executar
 
- Pré-requisitos
+### Pré-requisitos
 - Docker
 - Docker Compose
 
- Subir o ambiente
+### Subir o ambiente
 
 ```bash
 # Clone o repositório
@@ -119,7 +120,7 @@ docker-compose down
 docker-compose up -d --build
 ```
 
-Acessos
+### Acessos
 
 | Serviço          | URL                        |
 |------------------|----------------------------|
@@ -129,7 +130,7 @@ Acessos
 
 ---
 
-📸 Interface
+## 📸 Interface
 
 > Estética: HUD militar / Cyberpunk (CRT, neon, tipografia tática)
 
@@ -142,7 +143,7 @@ Acessos
 
 ---
 
-🧰 Stack Tecnológica
+## 🧰 Stack Tecnológica
 
 - **Backend:** Python 3.11+ · FastAPI
 - **Análise:** AST · YARA · Z-Score · Shannon Entropy
@@ -152,7 +153,7 @@ Acessos
 
 ---
 
- 📁 Estrutura do Projeto
+## 📁 Estrutura do Projeto
 
 ```text
 sec-analyzers-lab/
@@ -170,7 +171,7 @@ sec-analyzers-lab/
 
 ---
 
-🎓 Aprendizados
+## 🎓 Aprendizados
 
 Este projeto me permitiu aplicar na prática conceitos de:
 
@@ -183,9 +184,9 @@ Este projeto me permitiu aplicar na prática conceitos de:
 
 ---
 
- 👨‍💻 Autor
+## 👨‍💻 Autor
 
-Erivelton da Rocha Silva
+**Erivelton da Rocha Silva**  
 Estudante de Engenharia de Software e Segurança da Informação  
 📍 Sertãozinho / SP - Brasil
 
@@ -196,7 +197,7 @@ Estudante de Engenharia de Software e Segurança da Informação
 
 ---
 
- 📄 Licença
+## 📄 Licença
 
 Este projeto está sob a licença MIT.
 ```
