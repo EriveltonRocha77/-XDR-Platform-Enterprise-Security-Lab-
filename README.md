@@ -1,4 +1,3 @@
-
 ```markdown
 # 🛡️ XDR Neo-Platform | Enterprise Security Lab
 
